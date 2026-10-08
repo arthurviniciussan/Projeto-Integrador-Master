@@ -5,6 +5,7 @@ import { FooterComponent } from '../../shared/footer/footer';
 import { MenuComponent } from '../../shared/menu/menu';
 import { ClienteService } from '../../services/cliente.service';
 import { Cliente } from '../../models/cliente.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cadastro',
@@ -133,5 +134,6 @@ export class CadastroComponent {
     this.clienteService.adicionar(novoCliente);
 
     alert('Cadastro realizado com sucesso!');
+    this.router.navigate(['/']);
   }
 }
