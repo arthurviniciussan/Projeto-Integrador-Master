@@ -153,6 +153,20 @@ img {
 	gap: 8px;
 	margin-top: 8px;
 }
+
+.button-button-secondary {
+	color: var(--cor-texto);
+	background: var(--cor-superficie);
+	border-color: var(--cor-borda);
+}
+.button-button-primary {
+	color: #fff;
+	background: var(--cor-madeira);
+	border-radius: 4px;
+}
+
+
+
 /* ========== */
 
 /* Modais de manutenção de produtos */

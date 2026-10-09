@@ -15,6 +15,7 @@ import { Router } from '@angular/router';
   styleUrl: './cadastro.css',
 })
 export class CadastroComponent {
+  private readonly router = inject(Router);
 
 
   private readonly clienteService = inject(ClienteService);

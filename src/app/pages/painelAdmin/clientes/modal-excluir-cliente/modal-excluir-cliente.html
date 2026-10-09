@@ -3,8 +3,8 @@
     <h2 id="titulo-excluir-cliente">Excluir cliente</h2>
     <p>Tem certeza de que deseja excluir <strong>{{ cliente().nome }}</strong>? Esta ação não pode ser desfeita.</p>
     <div class="cliente-modal-acoes">
-      <button class="button button-secondary" type="button" (click)="fechar.emit()">Cancelar</button>
-      <button class="button button-danger-solid" type="button" (click)="confirmar.emit()">Excluir cliente</button>
+      <button class="button-button-secondary" type="button" (click)="fechar.emit()">Cancelar</button>
+      <button class="button-button-primary" type="button" (click)="confirmar.emit()">Excluir cliente</button>
     </div>
   </section>
 </div>

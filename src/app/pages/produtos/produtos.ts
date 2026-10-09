@@ -15,7 +15,7 @@ type ModalProduto = 'adicionar' | 'editar' | 'excluir';
   imports: [
     SidebarComponent,
     MenuComponent,
-    EditarProduto,
+    EditarProduto, // <-- Registrado aqui para o HTML reconhecer a tag
     ModalExcluirProdutoComponent // <-- Registrado aqui para o HTML reconhecer a tag
   ],
   templateUrl: './produtos.html',
