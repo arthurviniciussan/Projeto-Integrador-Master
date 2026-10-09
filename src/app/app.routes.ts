@@ -19,9 +19,6 @@ export const routes: Routes = [
 	{ path: 'login', component: LoginComponent },
 	{ path: 'produtos', component: Produtos },
 	{ path: 'editar-produto', component: EditarProduto }, 
-	
-	// CORRIGIDO: Rota cadastrada para interceptar o clique na imagem e abrir a consulta!
 	{ path: 'produtos/consulta', component: ConsultaProdutos }, 
-
 	{ path: '**', redirectTo: '' }
 ];
