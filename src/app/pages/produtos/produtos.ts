@@ -4,7 +4,6 @@ import { SidebarComponent } from '../../shared/sidebar/sidebar';
 import { MenuComponent } from '../../shared/menu/menu';
 import { DadosProduto, Produto } from '../../models/produto.model';
 import { EditarProduto } from './editar-produto/editar-produto'; 
-// IMPORTANTE: Importa a classe do modal de exclusão corrigida
 import { ModalExcluirProdutoComponent } from './modal-excluir-produto/modal-excluir-produto';
 
 type ModalProduto = 'adicionar' | 'editar' | 'excluir';
@@ -15,8 +14,8 @@ type ModalProduto = 'adicionar' | 'editar' | 'excluir';
   imports: [
     SidebarComponent,
     MenuComponent,
-    EditarProduto, // <-- Registrado aqui para o HTML reconhecer a tag
-    ModalExcluirProdutoComponent // <-- Registrado aqui para o HTML reconhecer a tag
+    EditarProduto, 
+    ModalExcluirProdutoComponent 
   ],
   templateUrl: './produtos.html',
   styleUrl: './produtos.css',

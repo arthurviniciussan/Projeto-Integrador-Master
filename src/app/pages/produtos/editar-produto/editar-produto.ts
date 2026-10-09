@@ -13,7 +13,7 @@ export class EditarProduto implements OnInit {
 
   mensagemAviso: string | null = null;
 
-  // Objeto padrão (caso o usuário entre na página sem clicar na tabela)
+
   produto = {
     sku: '',
     nome: '',
@@ -21,14 +21,14 @@ export class EditarProduto implements OnInit {
     madeira: '',
     preco: 0,
     estoque: 0,
-    fotoUrl: 'https://unsplash.com' // imagem padrão vazia
+    fotoUrl: 'https://unsplash.com' 
   };
 
   categorias: string[] = ['Mesas', 'Cadeiras', 'Armários', 'Prateleiras', 'Sofás & Poltronas', 'Quartos & Camas', 'Jantar & Cadeiras', 'Decoração'];
   madeiras: string[] = ['Peroba Rosa', 'Ipê', 'Cumaru', 'Eucalipto', 'Pinho'];
 
   constructor() {
-    // Captura os dados e a imagem enviados pela tabela antes da página desenhar
+    
     const navegacao = this.router.getCurrentNavigation();
     const estado = navegacao?.extras.state as { produto: any };
     
@@ -37,23 +37,23 @@ export class EditarProduto implements OnInit {
         sku: estado.produto.sku,
         nome: estado.produto.nome,
         categoria: estado.produto.categoria,
-        madeira: estado.produto.madeira || 'Peroba Rosa', // assume padrão caso não venha definido
+        madeira: estado.produto.madeira || 'Peroba Rosa', 
         preco: estado.produto.preco,
         estoque: estado.produto.estoque,
-        fotoUrl: estado.produto.imagem // Vincula a foto certinho!
+        fotoUrl: estado.produto.imagem 
       };
     }
   }
 
   ngOnInit(): void {
-    // Inicialização da página limpa
+   
   }
 
   trocarFoto(event: Event): void {
     const input = event.target as HTMLInputElement;
-    // CORRIGIDO: Validação direta adicionando o [0] para ler a foto sem dar erro de compilação
+    
     if (input && input.files && input.files.length > 0) {
-      const file = input.files[0]; // <-- O [0] aqui resolve o erro na linha do file!
+      const file = input.files[0]; 
       const reader = new FileReader();
       reader.onload = (e) => {
         if (e.target?.result) {

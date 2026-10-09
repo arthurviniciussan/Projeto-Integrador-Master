@@ -1,38 +1,31 @@
 <div class="container">
 
-  <!-- ======================================================================
-       AVISO FLUTUANTE
-       ====================================================================== -->
+  
   @if (mensagemAviso) {
     <div class="aviso">
       {{ mensagemAviso }}
     </div>
   }
 
-  <!-- ======================================================================
-       CABEÇALHO DA PÁGINA
-       ====================================================================== -->
+  
   <header class="header">
     <h1 class="logo">ARCHIMADEIRA</h1>
     <span class="subtitulo">Editar Produto #{{ produto.sku }}</span>
   </header>
 
-  <!-- ======================================================================
-       CONTEÚDO PRINCIPAL (FORMULÁRIO + FOTO)
-       ====================================================================== -->
+ 
   <main class="grid-layout">
 
-    <!-- SEÇÃO 1: FORMULÁRIO DE DADOS -->
+  
     <section class="card">
       <h2>Dados Básicos</h2>
 
-      <!-- Campo Nome -->
+    
       <div class="campo">
         <label>Nome do Produto</label>
         <input type="text" [value]="produto.nome" (input)="produto.nome = $any($event.target).value" />
       </div>
 
-      <!-- Linha Categoria e Madeira -->
       <div class="linha-dupla">
         <div class="campo">
           <label>Categoria</label>
@@ -53,7 +46,7 @@
         </div>
       </div>
 
-      <!-- Linha Preço e Estoque -->
+    
       <div class="linha-dupla">
         <div class="campo">
           <label>Preço (R$)</label>
@@ -67,7 +60,7 @@
       </div>
     </section>
 
-    <!-- SEÇÃO 2: IMAGEM DO PRODUTO -->
+   
     <section class="card card-foto">
       <h2>Fotografia</h2>
 
@@ -83,9 +76,7 @@
 
   </main>
 
-  <!-- ======================================================================
-       BARRA DE AÇÕES (BOTÕES)
-       ====================================================================== -->
+
   <footer class="acoes">
     <button class="btn-secundario" (click)="descartar()">Descartar</button>
     <button class="btn-principal" (click)="salvarProduto()">Salvar Alterações</button>

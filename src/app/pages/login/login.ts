@@ -27,7 +27,7 @@ export class LoginComponent {
   fazerLogin() {
     if (this.emailOuCpf === 'admin' && this.senha === 'admin') {
       alert('Bem-vindo, Administrador!');
-      this.router.navigate(['/admin-cadastro-produtos']);
+      this.router.navigate(['/Produtos']);
     } else if (this.emailOuCpf !== '' && this.senha !== '') {
       alert('Bem-vindo, Cliente!');
       this.router.navigate(['/']);
