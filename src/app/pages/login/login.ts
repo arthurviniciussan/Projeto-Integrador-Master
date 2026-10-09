@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { MenuComponent } from '../../shared/menu/menu';
 import { FooterComponent } from '../../shared/footer/footer';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -15,8 +15,14 @@ import { FooterComponent } from '../../shared/footer/footer';
 export class LoginComponent {
   emailOuCpf: string = '';
   senha: string = '';
+  
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {}
+
+  routerLinkCadastro() {
+    this.router.navigate(['/cadastro']);
+  }
+  
 
   fazerLogin() {
     if (this.emailOuCpf === 'admin' && this.senha === 'admin') {
